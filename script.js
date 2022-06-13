@@ -4,17 +4,37 @@ const appVue = new Vue({
 
   // Conterrà tutti i dati necessari all'applicazione
     data: {
-	  // varie chiavi necessarie all'app
-    todolist : ['compra pane'],
-    newItem : "",
+    inputVal:'',
+	newId:'',
+    input: false,
+    todolist : [{
+        id : 1,
+        elemento :'test',
+    },
+    
+],
+    newId: 2,
     },
 	
-	// Conterrà una serie di funzioni
+	
 	methods: {
-		// funzioni che useremo nell'app
-        addItem () {
-            this.todolist.push(this.newItem);
-            this.newItem = '';
+		
+        addTask : function () {
+            if(this.addTask){
+                this.todolist.push({
+                id: this.newId++,
+                elemento: this.inputVal,
+                done:false
+                })
+            }
+            this.inputVal = ''
+        },
+        done: function (text){
+            if(text.done = false){
+                text.done = true
+            }else{
+                text.done = false
+            }
         }
 	}
 });
