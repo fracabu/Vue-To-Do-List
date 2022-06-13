@@ -5,6 +5,7 @@ const appVue = new Vue({
   // Conterrà tutti i dati necessari all'applicazione
   data: {
 	  // varie chiavi necessarie all'app
+      todolist : ['compra pane','compra pane','compra pane','compra pane']
   },
 	
 	// Conterrà una serie di funzioni
