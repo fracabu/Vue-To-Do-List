@@ -1,15 +1,20 @@
 const appVue = new Vue({
 	// selettore dell'elemento html dove avviare vue
-  el: "#app",
+    el: "#app",
 
   // Conterrà tutti i dati necessari all'applicazione
-  data: {
+    data: {
 	  // varie chiavi necessarie all'app
-      todolist : ['compra pane','compra pane','compra pane','compra pane']
-  },
+    todolist : ['compra pane'],
+    newItem : "",
+    },
 	
 	// Conterrà una serie di funzioni
 	methods: {
 		// funzioni che useremo nell'app
+        addItem () {
+            this.todolist.push(this.newItem);
+            this.newItem = '';
+        }
 	}
 });
