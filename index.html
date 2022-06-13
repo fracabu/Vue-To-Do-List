@@ -13,10 +13,17 @@
 <body>
     
     <div id="app">
+        
+        <div class="container">
+            <ul>
+                <li v-for="item in todolist">{{ todolist }}</li>
+            </ul>
+        </div>
 
-        <ul>
-            <li v-for="item in todolist">{{ todolist }}</li>
-        </ul>
+        <div class="container">
+            <input id="input" type="text" v-model="newItem">
+            <button>Add to do Item</button>
+        </div>
 
 
     </div>
